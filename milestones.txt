@@ -1,1 +1,3 @@
-
+- Finds different sources of datasets and begin doing data processing(3 sources each member is responsible for one and we all find one indirectly related data)
+- Doing comparison of data before and after pandemic by using graphs.(each member is responsible for its source data)
+- Make reports for the data analysis results and be ready for presentation.(Do these together)

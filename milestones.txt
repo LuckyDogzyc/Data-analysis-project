@@ -1,3 +1,8 @@
-- Finds different sources of datasets and begin doing data processing(3 sources each member is responsible for one and we all find one indirectly related data)
-- Doing comparison of data before and after pandemic by using graphs.(each member is responsible for its source data)
-- Make reports for the data analysis results and be ready for presentation.(Do these together)
+2020/11/22 - 2020/12/04:
+  (Delayed) - Finds different sources of datasets and begin doing data processing(3 sources each member is responsible for one and we all find one indirectly related data)
+  (Delayed) - Doing comparison of data before and after pandemic by using graphs.(each member is responsible for its source data)
+  (Delayed) - Make reports for the data analysis results and be ready for presentation.(Do these together)
+
+2020/12/04 - 2020/12/06:
+  (In progress) - Each person find 2 datasets releted to new york city covid-19 impact.
+  (In progress) - Clean and integrate the data, and describe the steps performed to clean and integrate the datasets.

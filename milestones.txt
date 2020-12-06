@@ -4,5 +4,5 @@
   (Delayed) - Make reports for the data analysis results and be ready for presentation.(Do these together)
 
 2020/12/04 - 2020/12/06:
-  (In progress) - Each person find 2 datasets releted to new york city covid-19 impact.
-  (In progress) - Clean and integrate the data, and describe the steps performed to clean and integrate the datasets.
+  (Finished) - Each person find 2 datasets releted to new york city covid-19 impact.
+  (Delayed) - Clean and integrate the data, and describe the steps performed to clean and integrate the datasets.

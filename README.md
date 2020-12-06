@@ -23,4 +23,4 @@ Big data project 4
 
 # Relevant work
 
-1.
+1.Impact of social distancing during COVID-19 pandemic on crime in Los Angeles and Indianapolis(https://www.sciencedirect.com/science/article/pii/S0047235220301860)

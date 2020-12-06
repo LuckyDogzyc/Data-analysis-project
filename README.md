@@ -1,7 +1,7 @@
 # Data-analysis-project
 Big data project 4
 
-# Aspect - Crime in NYC
+# Aspect - Covid relationship with Crime in NYC
 
 # Problem
 1. How covid 19 affects the crime rate in each area in NYC?

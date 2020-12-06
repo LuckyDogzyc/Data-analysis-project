@@ -51,6 +51,9 @@ https://www.bls.gov/regions/new-york-new-jersey/data/xg-tables/ro2xglausnyc.htm
 
 # Relevant work
 
-1.Impact of social distancing during COVID-19 pandemic on crime in Los Angeles and Indianapolis(https://www.sciencedirect.com/science/article/pii/S0047235220301860)
-2.New York City Police Department https://www1.nyc.gov/site/nypd/stats/crime-statistics/citywide-crime-stats.page
-3.Analyzing the Economic Impact of COVID-19 on New York City https://medium.com/nyc-opportunity/analyzing-the-economic-impact-of-covid-19-on-new-york-city-d12bcebe65b3
+1. Impact of social distancing during COVID-19 pandemic on crime in Los Angeles and Indianapolis
+(https://www.sciencedirect.com/science/article/pii/S0047235220301860)
+2. New York City Police Department 
+https://www1.nyc.gov/site/nypd/stats/crime-statistics/citywide-crime-stats.page
+3. Analyzing the Economic Impact of COVID-19 on New York City 
+https://medium.com/nyc-opportunity/analyzing-the-economic-impact-of-covid-19-on-new-york-city-d12bcebe65b3

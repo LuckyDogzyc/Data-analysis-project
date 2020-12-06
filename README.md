@@ -1,7 +1,7 @@
 # Data-analysis-project
 Big data project 4
 
-# Aspect - Crime in NYC
+# Aspect - Covid relationship with Crime in NYC
 
 # Problem
 1. How covid 19 affects the crime rate in each area in NYC?
@@ -23,4 +23,4 @@ Big data project 4
 
 # Relevant work
 
-1.
+1.Impact of social distancing during COVID-19 pandemic on crime in Los Angeles and Indianapolis(https://www.sciencedirect.com/science/article/pii/S0047235220301860)

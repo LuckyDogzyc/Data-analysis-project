@@ -6,3 +6,7 @@
 2020/12/04 - 2020/12/06:
   (Finished) - Each person find 2 datasets releted to new york city covid-19 impact.
   (Delayed) - Clean and integrate the data, and describe the steps performed to clean and integrate the datasets.
+  
+ 2020/12/06 - 2020/12/07:
+ Find relevant data of crimes.
+ Summarize the data output.

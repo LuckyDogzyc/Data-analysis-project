@@ -3,3 +3,6 @@
 
 # Ipynb/Jupyter notebook checkpoints
 .ipynb_checkpoints/
+
+# vscode settings file
+.vscode/

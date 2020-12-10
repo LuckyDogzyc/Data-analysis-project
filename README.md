@@ -57,3 +57,5 @@ https://www.bls.gov/regions/new-york-new-jersey/data/xg-tables/ro2xglausnyc.htm
 https://www1.nyc.gov/site/nypd/stats/crime-statistics/citywide-crime-stats.page
 3. Analyzing the Economic Impact of COVID-19 on New York City 
 https://medium.com/nyc-opportunity/analyzing-the-economic-impact-of-covid-19-on-new-york-city-d12bcebe65b3
+4.The Effects of Unemployment on Crime Rates in the U.S.
+https://smartech.gatech.edu/bitstream/handle/1853/53294/theeffectsofunemploymentoncimerates.pdf

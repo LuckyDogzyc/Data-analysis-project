@@ -16,4 +16,4 @@
   (Finished) - Visualize the data.
 
 2020/12/09 - 2020/12/11:
-  (In Progress) - Write the report.
+  (Finished) - Write the report.

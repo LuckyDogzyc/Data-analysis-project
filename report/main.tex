@@ -35,13 +35,15 @@ yz6615@nyu.edu}
 
 
 \section{Introduction}
-Since the pandemic outbreak, people's daily lives change dramatically without any previous experience. As everything is transferred online, people's outdoor activities are severely restricted due to the highly contagious property of the COVID-19 Virus. For this new kind of social phenomenon, we are curious about how COVID 19 could ever change the criminal cases as people's outdoor activities are restricted. Therefore, with this question, we begin searching for data to validate the public safety trend under the pandemic.
+Since the pandemic outbreak, people's daily lives change dramatically without any previous experience. As everything is transferred online, people's outdoor activities are severely restricted due to the highly contagious property of the COVID-19 Virus. For this new kind of social phenomenon, we are curious about how COVID-19 could ever change the criminal cases as people's outdoor activities are restricted. Therefore, with this question, we begin searching for data to validate the public safety trend under the pandemic.
 
 We have made our code publicly available on GitHub.\footnote{\url{https://github.com/ZhenZhouXu/Data-analysis-project}}
 
 
 \section{Problem formulation}
 John MacDonald mentioned that the variance of crime rates across time is one of the oldest puzzles in the social sciences. Especially in a metropolis like New York City.~\cite{mac2020TheEffe} The crime rate could have rapid changes when various events happen. We want to find what changes the pandemic and the social distancing could cause to the crime in New York City. We want to know how COVID-19 affects the crime rate in each area in NYC? What age of criminals and what kind of crimes increase or decrease? How the unemployment rate caused by COVID could change the crime rate. And what the lockdown policy do to the changes in the crime rate.
+
+Hypotheses are made that COVID-19 may cause the crime rate to increase due to the increasing unemployment rate, and it could also cause the crime rate to decrease due to the lockdown policy that further results in less outdoor activities.
 
 \section{Related Work}
 Exceptional phenomena, such as natural disasters and pandemics, could in a dramatic change in human actions. And COVID-19 is non-exceptional in this case, which not only leads to a massive loss of lives but also contributes to unprecedented loss of jobs and significant change in the distribution of crimes.
@@ -57,7 +59,7 @@ More specifically, there are also studies directing at the influence of COVID-19
 It is shown that there are multiple works studying the relationship between COVID-19 and Crimes, which mainly focus on a national view of the entire United States. Meanwhile, there are few articles that specifically study the relationship in New York City.
 
 \section{Methods}
-To analysis the relationship between COVID-19 cases and the crimes in New York City, we need to find the appropriate datasets and grab the data we need. Then we use Hadoop and Spark to scale down large datasets and generate summary data, which are further processed by pandas to compose relationships between each dataset and finally visualized by Altair or Matplotlib. During the visualization process, we find that the cases drawing by lines fluctuated quickly and made it hard to figure out the trend. So we try to use rolling means by certain window sizes to make visualization be easier to observe. Finally, We analysis the COVID-19 report cases and the timeline of the influence events to make the connections with our data.
+To analysis the relationship between COVID-19 cases and the crimes in New York City, we need to find the appropriate datasets and grab the data we need. Then we use Hadoop and Spark to scale down large datasets and generate summary data, which are further processed by pandas to compose relationships between each dataset and finally visualized by Altair or Matplotlib. We analysis the COVID-19 report cases and the timeline of the influence events to make the connections with our data.
 
 \subsection{COVID-19 Cases}
 We download the Data Table for Case Daily Trends in New York City from the CDC COVID Data Tracker. It tracked the case count from January 21st to December 8th. 
@@ -74,7 +76,6 @@ There are various kinds of crimes happening every day in New York City. We try t
 
 \subsubsection{Age Group}
 Different age groups may acts differently towards this crisis for the reason that the news propaganda of old people's vulnerability to COVID 19. Younger people may have stronger immunity and hence they may not restrict their outdoor activity. To validate this hypothesis, we extract data from the NYPD arrest data set and use spark to summarize the data over each age group. Finally, we draw the graph of criminal cases and the date. Compare different age group cases variation over time.
-
 
 \subsubsection{Hate Crime}
 Ever since the beginning of the pandemic, there are lots of news going on about hate crimes targeting Asians is rising in NYC~\cite{irene2020hatecrimes}. Therefore, this report wants to find out if it is the truth and also explores the changes in hate crimes targeting different races before and during the COVID-19.
@@ -118,14 +119,22 @@ Items below are the challenges that we faced:
 \subsubsection{Burglary}
 Burglary refers to the crime of illegally breaking and entering any structure with the intent to commit any crime inside like theft or larceny. Due to the effects of the pandemic and the lockdown policy, people are running out of their livelihood without any assistance in the beginning. Will the crime rate increase dramatically for this reason? How will the pandemic affect burglary crime cases or crime rates before and after the pandemic? We will compare the counts of burglary to the date to see the actual effect of the pandemic.
 
+
+
 \subsubsection{Traffic Violation}
 Traffic violations occur when the driver violates the laws that regulate vehicle operation on streets and highways. As the significant event-New York lockdown policy executed, we think people's outdoor activity may significantly decrease. So the traffic violation cases may significantly decrease as well. This is an important category of crimes to estimate the hypothesis that people will restrict their willingness to travel or driving when the pandemic occurs for their serious damage to public health.
 
-
+The dataset we used for Age group, Burglary and Traffic Violation was from arrest data in NYPD website in 2020 from January to September. The following steps are performed to clean, cluster and plot the data:
+\begin{itemize}
+\item Check for NULL value in each row
+\item Used nearest neighbour to find out crime category that has similar meaning
+\item integrate the data according to each category of crimes, age group and total number of cases.
+\item we find out that some data fluctuated too quickly to observe the data trend, Rolling means was used to flatten the variation of the data and made the data be easier to be observed.
+\end{itemize}
 \section{Results}
 
 \subsection{Unemployment Rate}
- Figure~\ref{fig:unemployment_2020} shows the trend of unemployment rate data collected from New York state website~\cite{newyork2020unemployment} in five boroughs of New York City (The Bronx, Brooklyn, Manhattan, Queens, and Staten Island) in 2020.
+ Figure~\ref{fig:unemployment_2020} shows the trend of unemployment rate data collected from New York state website~\cite{newyork2020unemployment} in five boroughs of New York City (The Bronx, Brooklyn, Manhattan, Queens, and Staten Island) in 2020. It is shown that different areas are under different impact of the unemployment caused mainly by COVID-19. The poorest borough Bronx that also has the highest crime rate is under most severe attack by the unemployment, which reflects the discrepancy in social classes.
 
 \begin{figure}[ht!]
     \centering
@@ -137,7 +146,7 @@ Traffic violations occur when the driver violates the laws that regulate vehicle
 \subsection{Crime}
 
 \subsubsection{Total Crime Cases}
-Figure~\ref{fig:totalCrimeCases_2020} shows the total crime cases change in each Borough from January to September from NYC open data of arresting data in 2020. As we can see, when the lockdown policy published on March, the total crime cases dropped dramatically and this policy was very effective due to outdoor activities was restricted; However, there was a sudden rise from March to June. Several reasons may contribute to this trend during that period and Manhattan contributes a lot during that time.
+Figure~\ref{fig:totalCrimeCases_2020} shows the total crime cases change in each Borough from January to September from NYC open data of arresting data in 2020. As we can see, when the lockdown policy published on March, the total crime cases dropped dramatically and this policy was very effective due to outdoor activities was restricted; However, there was a sudden rise from March to June. Several reasons may contribute to this trend during that period. After plotting the data of each borough in line format,  Figure ~\ref{fig:BoroughLineGraph} clearly shows that Manhattan crime cases rose rapidly from May to June.
 
 
 \begin{figure}[ht!]
@@ -147,6 +156,12 @@ Figure~\ref{fig:totalCrimeCases_2020} shows the total crime cases change in each
     \label{fig:totalCrimeCases_2020}
 \end{figure}
 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\linewidth]{images/BoroughLineGraph.png}
+    \caption{NYC crime cases line graph in each borough in 2020}
+    \label{fig:BoroughLineGraph}
+\end{figure}
 
 \subsubsection{Age Group}
 Figure ~\ref{fig:AgeGroup_2020} shows the crime cases trend before and after the pandemic.  From January to March, the criminal cases were stable and after the release of the lockdown policy, the crime cases over each age group were decreasing dramatically. But except for the age group of 65+,  other age groups all rise suddenly from March to June. We think people over 65 are more concerned about their health and follow the guided rules of staying at home. So the cases dropped and stay constant with little difference from March to September. Other age groups all rise suddenly in the middle of the time.
@@ -195,7 +210,19 @@ Figure ~\ref{fig:TrafficAndBurglary} shows sudden increase of burglary from Marc
 \subsubsection{Traffic Violation}
 Figure ~\ref{fig:TrafficAndBurglary} shows Traffic violation is dropping dramatically in New York city, as the lockdown policy published, Many restaurants and markets were restricted for opening time. People were less likely to drive or go outside as we observe from this graph.
 
+\section{conclusion}
+Overall, COVID 19 has a significant impact on numerous aspects of people's daily lives. As shown in the visualization, the pandemic was effective over the unemployment rate, total crime cases, and specific categories of crimes.
 
+In the unemployment rate:
+COVID-19 has shown its enormous impact on unemployment in different areas, while the poor suffer the most in this situation. There also shows a pattern that boroughs with higher crime rates are affected more by the pandemic leading to more job losses.
+
+In total crime cases:
+COVID-19 and the lockdown policy was quite effective for the total crime cases; However, as the unemployment rate was increasing, people were running out of their livelihood as well as the damage of mental health when people keep staying at home. Crime cases rose up rapidly to the climax in June.
+
+In specific categories of crimes:
+There is a rise in the hate crimes targeting Asians at the beginning of the pandemic, while the overall number of hate crimes goes down with the ongoing pandemic which might result from less outdoor activities.
+There is a small impact on the shooting case by COVID. Since other violations happened at the same time that are not caused by COVID, we can not conclude that COVID affects the cases of shooting crime.
+Burglary crime cases clearly show the impact of the high unemployment rate on public safety. Traffic violation cases show the effectiveness of lock-down policy over the outdoor activities of people. Each crime category was closely related to each other and revealed what was happening in New York City.
 
 \bibliographystyle{IEEEtran}
 \bibliography{biblography}
